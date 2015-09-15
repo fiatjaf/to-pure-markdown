@@ -1,4 +1,4 @@
-# to-markdown
+# to-pure-markdown
 
 An HTML to Markdown converter written in JavaScript.
 
@@ -12,36 +12,25 @@ toMarkdown(stringOfHTML, options);
 
 ### Browser
 
-Download the compiled script located at `dist/to-markdown.js`.
+Download the compiled script located at `dist/to-pure-markdown.js`.
 
 ```html
-<script src="PATH/TO/to-markdown.js"></script>
-<script>toMarkdown('<h1>Hello world!</h1>')</script>
-```
-
-Or with **Bower**:
-
-```sh
-$ bower install to-markdown
-```
-
-```html
-<script src="PATH/TO/bower_components/to-markdown/dist/to-markdown.js"></script>
+<script src="PATH/TO/to-pure-markdown.js"></script>
 <script>toMarkdown('<h1>Hello world!</h1>')</script>
 ```
 
 ### Node.js
 
-Install the `to-markdown` module:
+Install the `to-pure-markdown` module:
 
 ```sh
-$ npm install to-markdown
+$ npm install to-pure-markdown
 ```
 
 Then you can use it like below:
 
 ```js
-var toMarkdown = require('to-markdown');
+var toMarkdown = require('to-pure-markdown');
 toMarkdown('<h1>Hello world!</h1>');
 ```
 
@@ -51,7 +40,7 @@ toMarkdown('<h1>Hello world!</h1>');
 
 ### `converters` (array)
 
-to-markdown can be extended by passing in an array of converters to the options object:
+to-pure-markdown can be extended by passing in an array of converters to the options object:
 
 ```js
 toMarkdown(stringOfHTML, { converters: [converter1, converter2, …] });
@@ -106,7 +95,7 @@ The following converter replaces heading elements (`h1`-`h6`):
 
 ### `gfm` (boolean)
 
-to-markdown has beta support for GitHub flavored markdown (GFM). Set the `gfm` option to true:
+to-pure-markdown has beta support for GitHub flavored markdown (GFM). Set the `gfm` option to true:
 
 ```js
 toMarkdown('<del>Hello world!</del>', { gfm: true });
@@ -138,7 +127,6 @@ First make sure you have node.js/npm installed, then:
 
 ```sh
 $ npm install --dev
-$ bower install --dev
 ```
 
 Automatically browserify the module when source files change by running:
@@ -159,8 +147,4 @@ $ npm test
 
 ## Credits
 
-Thanks to all [contributors](https://github.com/domchristie/to-markdown/graphs/contributors). Also, thanks to [Alex Cornejo](https://github.com/acornejo) for advice and inspiration for the breadth-first search algorithm.
-
-## Licence
-
-to-markdown is copyright &copy; 2011-15 [Dom Christie](http://domchristie.co.uk) and released under the MIT license.
+This is a fork of the excellent [to-markdown](https://github.com/domchristie/to-markdown) by [domchriste](http://domchristie.co.uk/).
