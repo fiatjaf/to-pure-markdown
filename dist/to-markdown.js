@@ -531,7 +531,7 @@ module.exports = [
       return this.isBlock(node);
     },
     replacement: function (content, node) {
-      return '\n\n' + this.outer(node, content) + '\n\n';
+      return '\n\n' + content + '\n\n';
     }
   },
 
@@ -541,10 +541,11 @@ module.exports = [
       return true;
     },
     replacement: function (content, node) {
-      return this.outer(node, content);
+      return content;
     }
   }
 ];
+
 },{}],4:[function(require,module,exports){
 'use strict';
 

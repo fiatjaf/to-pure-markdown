@@ -45,7 +45,7 @@ test('headings', function() {
     ['<h3>Hello world</h3>', '### Hello world', 'h3'],
     ['<h6>Hello world</h6>', '###### Hello world', 'h6'],
     ['<h4><i>Hello</i> world</h4>', '#### _Hello_ world', 'h4 with child'],
-    ['<h8>Hello world</h8>', '<h8>Hello world</h8>', 'invalid heading']
+    ['<h8>Hello world</h8>', 'Hello world', 'invalid heading']
   ]);
 });
 
@@ -75,8 +75,8 @@ test('anchors', function() {
   runTestCases([
     ['<a href="http://example.com/about">About us</a>', '[About us](http://example.com/about)', 'a'],
     ['<a href="http://example.com/about" title="About this company">About us</a>', '[About us](http://example.com/about "About this company")', 'a with title'],
-    ['<a id="donuts3">About us</a>', '<a id="donuts3">About us</a>', 'a with no src'],
-    ['<a href="http://example.com/about"><span>About us</span></a>', '[<span>About us</span>](http://example.com/about)', 'with a span']
+    ['<a id="donuts3">About us</a>', 'About us', 'a with no src'],
+    ['<a href="http://example.com/about"><span>About us</span></a>', '[About us](http://example.com/about)', 'with a span']
   ]);
 });
 
@@ -118,7 +118,7 @@ test('pre/code blocks', function() {
 
       'Multiple pre/code blocks'
     ],
-    ['<pre>preformatted</pre>', '<pre>preformatted</pre>', 'Plain pre']
+    ['<pre>preformatted</pre>', 'preformatted', 'Plain pre']
   ]);
 });
 
@@ -311,8 +311,8 @@ test('blockquotes', function() {
 
 test('block-level', function () {
   runTestCases([
-    ['<div>Hello</div><div>world</div>', '<div>Hello</div>\n\n<div>world</div>', 'divs separated by \\n\\n'],
-    ['<div><em>hello</em></div>', '<div>_hello_</div>']
+    ['<div>Hello</div><div>world</div>', 'Hello\n\nworld', 'divs separated by \\n\\n'],
+    ['<div><em>hello</em></div>', '_hello_']
   ]);
 });
 
