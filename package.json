@@ -5,7 +5,7 @@
   "keywords": "markdown text html2text html pure",
   "author": "Giovanni T. Parra",
   "main": "index.js",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/fiatjaf/to-pure-markdown.git"
@@ -25,6 +25,10 @@
   },
   "dependencies": {
     "collapse-whitespace": "1.1.2",
-    "jsdom": "^3.1.2"
-  }
+    "jsdom": "^6.5.1"
+  },
+  "engines": {
+    "node": "^4"
+  },
+  "license": "MIT"
 }
